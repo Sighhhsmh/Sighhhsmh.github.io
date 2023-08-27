@@ -195,7 +195,7 @@ i
 }
 .bg-image img
 {
-    display: none;
+    /* display: none; */
     position: relative;
     top: 6.5%;
     left: 8%;

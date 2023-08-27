@@ -49,8 +49,9 @@
     #beaker img
     {
         position: absolute;
-        width: 30%;
+        width: clamp(30%, 35vw, 100%);
         top: 16%;
+        opacity: 0.6;
         z-index: -1;
     }
     .beaker
@@ -73,11 +74,22 @@
         margin-top: 0;
         text-align: center;
     }
+    .bg-image
+    {
+        position: absolute;
+        width: 100vw;
+        overflow: hidden;
+    }
     .bg-image img
     {
-        display: block;
-        position: absolute;
+        /* display: block; */
+        /* position: absolute;
         top: 70%;
-        left: 55%;
+        left: 55%; */
+        position: relative;
+        top: 40%;
+        left: 40%;
+        width: clamp(20rem, 80vw, 100rem);
     }
+
 }
