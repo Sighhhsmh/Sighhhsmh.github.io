@@ -32,7 +32,7 @@ body
     color: white;
     font-size: clamp(3rem, 4vw, 4rem);
     text-decoration: none;
-
+    flex-grow: 1;
     display: block;
     padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
     transition: ease, 0.2s;
@@ -125,7 +125,7 @@ nav
     position: absolute;
     background-color: rgba(0, 0, 0, 0.2);
     box-shadow: inset 0px 6px 10px 0px;
-    width: 100%;
+    width: 100vw;
     /* margin-bottom: 10rem; */
     /* border-bottom: 1px solid rgba(128, 128, 128, 0.6); */
 }
@@ -148,9 +148,9 @@ nav
 #navlogo > a > img 
 {
     position: absolute;
-    /* height: 110%; */
-    width: 13.7%;
-    top: 0;
+    width: 12%;
+    left: 3.3rem;
+    top: 0.8rem;
 }
 #socials, #contact
 {
@@ -172,33 +172,32 @@ i
 }
 .bg-image
 {
-    width: 100%;
+    width: 50%;
     height: 100%;
-    position: absolute;
-    top: 0rem;
-    left: 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     z-index: -2;
     background-repeat: no-repeat;
     opacity: 1;
 }
 .bg-image img
 {
-    margin-top: 15%;
-    margin-left: 56.5%;
-    width: 25%;
-
+    position: relative;
+    top: 6.5%;
+    left: 8%;
+    width: clamp(4rem, 25vw, 32rem);;
     transition: ease 0.88s;
     transition-delay: 0.01s;
-    /* transform: rotate(-6.6deg); */
 }
 .cut
 {
     position: absolute;
     opacity: 0.2;
-    top: -10rem;
-    left: 81.3rem;
-    width: 100vw;
-    height: 200vh;
+    top: -10%;
+    left: 67.3%; 
+    width: 100%;
+    height: 200%;
     background-color: bisque;
     transform: rotate(34deg);
     z-index: -2;
