@@ -1,0 +1,83 @@
+@media (max-width: 1024px) 
+{
+
+    body
+    {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+    nav
+    {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+    }
+    .nav-section
+    {
+        border: none;
+        flex-grow: 1;
+    }
+    #socials, #contact
+    {
+        display: none;
+        flex-basis: 0%;
+    }
+    #navlogo
+    {
+        flex-basis: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+
+    }
+    #navlogo > a > img
+    {
+        position: relative;
+        width: clamp(50%, 50%, 100%);
+        left: calc(100%/4);
+        top: 0rem;
+    }
+    #beaker
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #beaker img
+    {
+        position: absolute;
+        width: 30%;
+        top: 16%;
+        z-index: -1;
+    }
+    .beaker
+    {
+        display: none;
+        margin-left: -6rem;
+    }
+    #menu
+    {
+        justify-content: center;
+    }
+    .menu-item
+    {
+        color: white;
+        font-size: clamp(1rem, 8vw, 20rem);
+    }
+    #menu-items
+    {
+        margin-left: 0;
+        margin-top: 0;
+        text-align: center;
+    }
+    .bg-image img
+    {
+        display: block;
+        position: absolute;
+        top: 70%;
+        left: 55%;
+    }
+}
