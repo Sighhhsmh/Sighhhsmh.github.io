@@ -160,19 +160,21 @@ nav
 }
 #navlogo > a > img 
 {
+    position: relative;
     width: clamp(14rem, 13.5vw, 18rem);
-    top: 0.8rem;
+    /* top: 0.8rem; */
 }
 #socials, #contact
 {
     flex-grow: 1;
 }
+
 i
 {
     font-size: x-large;
-    justify-content: space-around;
-    
+    justify-content: space-around;  
 }
+
 #beaker
 {
     display: none;
