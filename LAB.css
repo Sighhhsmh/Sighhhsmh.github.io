@@ -153,15 +153,14 @@ nav
 }
 #navlogo
 {
+    display: flex;
     flex-basis: calc(100% / 1.5);
     justify-content: flex-start;
     flex-grow: 0;
 }
 #navlogo > a > img 
 {
-    position: absolute;
-    width: 12%;
-    left: 3.3rem;
+    width: clamp(14rem, 13.5vw, 18rem);
     top: 0.8rem;
 }
 #socials, #contact

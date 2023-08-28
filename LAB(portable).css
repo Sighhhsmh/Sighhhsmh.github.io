@@ -1,6 +1,11 @@
 @media (max-width: 1024px) 
 {
-
+    @keyframes spin 
+    {
+        0%{transform: rotate(0deg);} 
+        100%{transform: rotate(360deg);}   
+    }
+    
     body
     {
         width: 100vw;
@@ -27,17 +32,21 @@
     }
     #navlogo
     {
+        display: flex;
         flex-basis: 100%;
         justify-content: center;
         align-items: center;
         flex-grow: 1;
 
     }
+    #navlogo a
+    {
+        display: flex;
+        justify-content: center;
+    }
     #navlogo > a > img
     {
-        position: relative;
-        width: clamp(50%, 50%, 100%);
-        left: calc(100%/4);
+        width: clamp(50%, 60%, 100%);
         top: 0rem;
     }
     #beaker
@@ -66,7 +75,7 @@
     .menu-item
     {
         color: white;
-        font-size: clamp(1rem, 8vw, 20rem);
+        font-size: clamp(2.5rem, 9vw, 10rem);
     }
     #menu-items
     {
@@ -82,14 +91,21 @@
     }
     .bg-image img
     {
-        /* display: block; */
-        /* position: absolute;
-        top: 70%;
-        left: 55%; */
         position: relative;
         top: 40%;
         left: 40%;
+        opacity: 0.8;
+        transition: none;
         width: clamp(20rem, 70vw, 80vw);
+        animation-name: spin;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-duration: 45s;
+        animation-delay: 0ms;
+    }
+    .cut
+    {
+        display: none;
     }
 
 }
