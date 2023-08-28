@@ -21,9 +21,8 @@ body
     background-color: var(--background);
     min-height: 100vh;
     min-width: 100vw;
-    overflow: hidden;
     padding: none;
-    margin: auto;
+    margin: 0px;
 }
 .page
 {
@@ -40,7 +39,7 @@ body
 }
 .menu-item
 {
-    color: white;
+    color: var(--text);
     font-size: clamp(3rem, 4vw, 4rem);
     text-decoration: none;
     flex-grow: 1;
@@ -140,8 +139,6 @@ nav
     background-color: rgba(var(--secondary), 0.8);
     box-shadow: inset 0px 6px 10px 0px;
     width: 100vw;
-    /* margin-bottom: 10rem; */
-    /* border-bottom: 1px solid rgba(128, 128, 128, 0.6); */
 }
 .nav-section
 {

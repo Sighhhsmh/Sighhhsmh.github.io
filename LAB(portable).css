@@ -72,7 +72,6 @@
     }
     .menu-item
     {
-        color: white;
         font-size: clamp(2.5rem, 9vw, 10rem);
     }
     #menu-items
