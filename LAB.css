@@ -33,6 +33,7 @@ body
 #menu
 {
     height: 100vh;
+    width: 100vw;
     display: flex;
     align-items: center;
 }
@@ -41,7 +42,7 @@ body
     color: white;
     font-size: clamp(3rem, 4vw, 4rem);
     text-decoration: none;
-    flex-grow: 0;
+    flex-grow: 1;
     display: block;
     padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
     transition: ease, 0.2s;
@@ -50,6 +51,9 @@ body
 {
     margin-left: clamp(4rem, 20vw, 14rem);
     margin-top: 8rem;
+    /* flex-basis: 3; */
+    flex-shrink: 0;
+    flex-grow: 1
 }
 #menu-items:hover > .menu-item
 {
@@ -198,10 +202,10 @@ i
     /* display: none; */
     position: relative;
     top: 6.5%;
-    left: 8%;
+    left: clamp(-4.5vw, -4vw, -6.5vw);
     flex-grow: 0;
-    flex-shrink: 0;
-    width: clamp(20rem, 25vw, 32rem);
+    flex-shrink: 1;
+    width: clamp(21rem, 25vw, 32rem);
     transition: ease 0.88s;
     transition-delay: 0.01s;
 }
