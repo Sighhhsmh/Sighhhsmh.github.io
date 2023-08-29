@@ -1,0 +1,21 @@
+:root
+{
+    --text: rgb(253, 237, 244);
+    --background: rgb(14, 2, 7);
+    --primary: rgb(233, 63, 139);
+    --secondary: rgb(43, 8, 24);
+    --accent: rgb(242, 146, 189);
+
+    --primaryO: rgba(233, 63, 139, 0.8);
+    --secondaryO: rgba(43, 8, 24, 0.8);
+    --accentO: rgba(242, 146, 189, 0.6);
+}
+
+/* :root
+{
+    --text: #0e0207;
+    --background: #fdedf4;
+    --primary: #e93f8b;
+    --secondary: #f7d4e4;
+    --accent: #d2196c;
+} */

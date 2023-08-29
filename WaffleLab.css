@@ -1,4 +1,4 @@
-@import url(Theme-Dark.css);
+@import url(Theme-Exp.css);
 
 
 
@@ -16,7 +16,7 @@ body
     height: 100vh;
     width: 100vw;
     margin: 0px;
-    overflow: hidden;
+    padding: 0px;
     background-color: var(--background);
 }
 nav
@@ -24,9 +24,9 @@ nav
     width: 100vw;
     display: flex;
     position: absolute;
-    background-color: rgba(var(--secondary), 0.8);
+    background-color: rgba(242, 146, 189, 0.2);
     box-shadow: inset 0px 6px 10px 0px var(--secondary);
-    border-bottom: 1px solid var(--accent);
+    border-bottom: 1px solid var(--accentO);
     font-weight: 900;
     font-size: 0.8rem;
 }
@@ -35,7 +35,7 @@ a
     color: var(--text);
     text-decoration: none;
     text-transform: uppercase;
-    /* text-shadow: 0px 0px 15px black; */
+    text-shadow: 0px 0px 15px var(--background);
 }
 a:visited
 {
@@ -43,10 +43,11 @@ a:visited
 }
 .nav-section
 {
-    padding: 1.5rem 2rem;
+    padding: 0.5rem 2rem;
     display: flex;
     gap: 1rem;
-    border-right: 1px solid var(--accent);
+    border-right: 1px solid var(--accentO);
+    /* #{'rgba(var(--color_rgb), 0.5)'}; */
     align-items: center;
     justify-content: center;
 }
@@ -57,6 +58,14 @@ a:visited
 #navlogo
 {
     justify-content: flex-start;
+}
+#navlogo > a
+{
+    position: relative;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    box-shadow: inset 0px 0px 20px -1px var(--primaryO);
+    top: 0.2rem;
 }
 #navlogo > a > img 
 {
@@ -74,15 +83,15 @@ i
     position: relative;
     font-size: 1.4rem;
     align-items: center;
-    top: 0.4rem;
+    top: 0.1rem;
 }
 #links
 {
-    gap: 5rem;
+    gap: 4.7rem;
 }
 #socials
 {
-    gap: 3rem;
+    gap: 2rem;
 }
 
 
@@ -90,18 +99,35 @@ i
 main
 {
     flex-grow: 1;
+    position: relative;
+    /* padding-top: 5.7rem; */
+}
+main > .bg
+{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-image: radial-gradient(rgba(43, 8, 24, 0.8) 9%, transparent 18% );
+    background-position: 0% 0%;
+    background-size: 12vmin 12vmin;
+    position: absolute;
+    z-index: -1;
 }
 main > article
 {
     display: grid;
     position: absolute;
     height: 100%;
+    width: 100%;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 2fr 1fr;
+    top: 0px;
+    left: 0px;
 }
 main > article > .article-section
 {
     height: 100%;
+    display: flex;
     border: 1px solid var(--accent);
 }
 main > article > .article-disc, main > article > .article-selector
@@ -112,7 +138,32 @@ main > article > .article-title, main > article > .article-selector
 {
     border-top: 1px solid var(--accent);
 }
-#sec-1
+main > article > .article-img > img
+{
+    padding-top: 5.7rem;
+    object-fit: cover;
+    width: 100%;
+}
+main > article > .article-disc > h1
+{
+    font-weight: bolder;
+    font-size: 3.5rem;
+    /* justify-content: center; */
+    align-items: center;
+    padding-top: 5.7rem;
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    margin: auto;
+}
+main > article > .article-title
+{
+    position: relative;
+}
+main > article > .article-selector
+{
+    position: relative;
+}
+/* #sec-1
 {
     left: 0;
 }
@@ -127,4 +178,4 @@ main > article > .article-title, main > article > .article-selector
 #sec-4
 {
     left: 300vw;
-}
+} */
