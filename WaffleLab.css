@@ -19,6 +19,14 @@ body
     padding: 0px;
     background-color: var(--background);
 }
+hr
+{
+    width: 27%;
+    margin: 0px;
+    padding: 0px;
+    opacity: 1;
+    box-shadow: 0px -3px 12px 0.2px var(--primaryO);
+}
 nav
 {
     width: 100vw;
@@ -29,6 +37,7 @@ nav
     border-bottom: 1px solid var(--accentO);
     font-weight: 900;
     font-size: 0.8rem;
+    z-index: 2;
 }
 a
 {
@@ -82,7 +91,6 @@ i
 {
     position: relative;
     font-size: 1.4rem;
-    align-items: center;
     top: 0.1rem;
 }
 #links
@@ -129,6 +137,9 @@ main > article > .article-section
     height: 100%;
     display: flex;
     border: 1px solid var(--accent);
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 main > article > .article-disc, main > article > .article-selector
 {
@@ -147,7 +158,7 @@ main > article > .article-img > img
 main > article > .article-disc > h1
 {
     font-weight: bolder;
-    font-size: 3.5rem;
+    font-size: clamp(0vh, 6.5vh, 8vh);
     /* justify-content: center; */
     align-items: center;
     padding-top: 5.7rem;
@@ -157,11 +168,38 @@ main > article > .article-disc > h1
 }
 main > article > .article-title
 {
-    position: relative;
+    padding: 1.5rem 4.2rem;
+    font-size: x-large;
 }
 main > article > .article-selector
 {
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-grow: 1;
+    font-size: xx-large;
+}
+main > article > .article-selector > button > i
+{
+    font-size: 4rem;
+}
+button
+{
+    height: 100%;
+    flex-grow: 1;
+    background: none;
+    z-index: 1;
+    border: none;
+    background: radial-gradient(var(--primary) 0%, transparent 0%);
+    background-position-x: -100% ;
+    transition: ease 1s;
+}
+button:hover 
+{
+    background: radial-gradient(var(--primary) 0%, transparent 70%);
+    background-position-x: 0%;
+    transition: ease 1s;
 }
 /* #sec-1
 {
@@ -179,3 +217,45 @@ main > article > .article-selector
 {
     left: 300vw;
 } */
+iframe
+{
+    position: relative;
+    padding-top: 6.21rem;
+    width: 100%;
+    /* height: calc(100vh/1.76); */
+    height: 100%;
+    z-index: 1;
+}
+#iframe
+{
+    display: grid;
+    grid-template-columns: 0.996fr 1fr;
+    /* height: calc(100% - 5.6rem); */
+    height: 100%;
+}
+#iframe > a
+{
+    /* text-align: center; */
+}
+#iframe > a > div
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+    border-left: 1px solid var(--accentO);
+    padding: 1rem 0rem;
+
+}
+#iframe > a > div > img
+{
+    position: relative;
+    padding: 1.5rem 0px;
+    width: clamp(12.5vw, 13vw, 50vw);
+}
+#iframe > a:nth-last-of-type(1) > div > img
+{
+    opacity: 0.2;
+}
